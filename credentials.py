@@ -1,2 +1,2 @@
 usr = ""
-pas = ""
+pas = "xc"
