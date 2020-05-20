@@ -1,9 +1,12 @@
 import mwclient
-from BotPassword import password
+import requests
+from requests_oauthlib import OAuth2
 
 site = mwclient.Site("myfirsttestwiki.fandom.com", path="/")
 
-site.login("Gryhyphen@Botdude", password)
+# This is so We dont have to put ayones password in a plaintext file.
+# WORKAROUND
+site.force_login = False
 
 page = site.pages["New page name"]
-page.edit("Hello World!")
+page.edit("Hello World! (Relma wuz here)")
