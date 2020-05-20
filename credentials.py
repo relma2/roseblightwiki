@@ -1,2 +1,2 @@
 usr = ""
-pas = ""
+pas = "get this out of here"
