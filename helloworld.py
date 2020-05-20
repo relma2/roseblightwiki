@@ -1,11 +1,10 @@
 import mwclient
 import requests
-from requests_oauthlib import OAuth2
+from credentials import usr, pas
 
 site = mwclient.Site("myfirsttestwiki.fandom.com", path="/")
 
-# This is so We dont have to put ayones password in a plaintext file.
-# WORKAROUND
+if !(usr and (not usr.isspace())) and !(pas and (not pas.isspace())):
 site.force_login = False
 
 page = site.pages["New page name"]
